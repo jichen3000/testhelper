@@ -1,9 +1,84 @@
-def mm()
-    puts("mm")
+direc = File.dirname(__FILE__)
+
+require "#{direc}/file_line"
+require 'pp'
+
+module TestHelper
+    module ObjectMixin
+        # It will pretty print the self, with title.
+        def pt(title=nil)
+            location_str = caller()[0]
+            if title == nil
+                title = SourceFile.get_variable_name(location_str, __callee__)
+            end
+            puts("#{title} : #{self.inspect()}")
+        end
+        def ptl(title=nil)
+            location_str = caller()[0]
+            puts(location_str)
+            if title == nil
+                title = SourceFile.get_variable_name(location_str, __callee__)
+            end
+            puts("#{title} : #{self.inspect()}")
+        end
+        def ppt(title=nil)
+            location_str = caller()[0]
+            if title == nil
+                title = SourceFile.get_variable_name(location_str, __callee__)
+            end
+            puts("#{title} :")
+            pp(self)
+        end
+        def pptl(title=nil)
+            location_str = caller()[0]
+            puts(location_str)
+            if title == nil
+                title = SourceFile.get_variable_name(location_str, __callee__)
+            end
+            puts("#{title} : ")
+            pp(self)
+        end
+        def flag_test(title=nil)
+            location_str = caller()[0]
+            puts(location_str)
+            if title == nil
+                title = "" 
+            else
+                title = title+" : " 
+            end
+            puts(title+"There are codes for test in this place!")
+        end
+        alias puts_with_title pt
+        alias puts_with_title_lineno ptl
+        alias pretty_print_with_title ppt
+        alias pretty_print_with_title_lineno pptl
+    end
 end
-def mm1()
-    puts("mm1")
+
+class Object < BasicObject # :nodoc:
+    include TestHelper::ObjectMixin
 end
 
 
-puts "ok"
+if __FILE__ == $0
+    class ColinTest
+        def inspect()
+            "ColinTest"
+        end
+        alias to_str inspect
+    end
+    name = "Test Helper"
+    name.pt()
+    name.pt("Tt's the name")
+    name.ppt()
+    name.ppt("Tt's the name")
+
+    ct = ColinTest.new()
+    ct.ptl()
+    ct.ptl("It's a new instance.")
+    ct.pptl()
+    ct.pptl("It's a new instance.")
+
+    flag_test()
+    flag_test("for test")
+end
