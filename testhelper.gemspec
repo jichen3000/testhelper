@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Colin Ji"]
   s.email       = 'jichen3000@gmail.com'
   s.files       = ["lib/testhelper.rb","lib/file_line.rb"]
-  s.homepage    = 'http://rubygems.org/gems/testhelper'
+  s.homepage    = 'https://github.com/jichen3000/testhelper'
   s.license     = 'MIT'
   s.required_ruby_version = '>= 1.9.0'
 end

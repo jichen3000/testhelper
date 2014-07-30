@@ -38,7 +38,7 @@ The below are useful functions:
 
 github: [https://github.com/jichen3000/testhelper](https://github.com/jichen3000/testhelper)
 
-rubygems: [https://rubygems.org/gems/filetesthelper](https://rubygems.org/gems/filetesthelper)
+rubygems: [https://rubygems.org/gems/testhelper](https://rubygems.org/gems/testhelper)
 
 -----------------------
 
@@ -54,7 +54,7 @@ Colin Ji <jichen3000@gmail.com>
 ### How to use
 
 pt, print with title. This function will print variable name as the title.
-code:
+<br>code:
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
@@ -70,7 +70,7 @@ print result:
 
 ppt, pretty print with title. This function will print variable name as the title
 in the first line, then pretty print the content of variable below the title.
-code:
+<br>code:
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
@@ -89,11 +89,12 @@ print result:
 
 ptl, print with title and code loction. This function just like pt, but will print
 the code location at the first line.
-code:
+<br>code:
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
-    name.ppt()                       
+    name.ppt()   
+                        
     # or you can give a string as title.
     name.ppt("It is a name:")
 
@@ -107,7 +108,7 @@ print result:
 
 pptl, pretty print with title and code loction. This function just like ppt, but will print
 the code location at the first line.
-code:
+<br>code:
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
@@ -127,7 +128,7 @@ print result:
     Test Helper
 
 flag_test will print a message 'There are codes for test in this place!' with the code loction.
-code:
+<br>code:
 
     flag_test()
 
@@ -138,7 +139,6 @@ print result:
 
     /Users/colin/work/testhelper/lib/testhelper.rb:84:in `<main>'
     There are codes for test in this place!    
-
 
     /Users/colin/work/testhelper/lib/testhelper.rb:89:in `<main>'
     for test : There are codes for test in this place!    
