@@ -8,10 +8,6 @@ module FileLine
 end
 
 module SourceFile
-# /Users/colin/work/testhelper/lib/testhelper.rb:55:in `<main>'
-# "            self.ppt()\n"
-# ColintTest
-# "    mm.ppt()\n"    
     def self.split_file_name_and_no(location_str)
         source_infos = location_str.split(":")
         [source_infos[0], source_infos[1].to_i]

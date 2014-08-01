@@ -89,6 +89,8 @@ print result:
 
 ptl, print with title and code loction. This function just like pt, but will print
 the code location at the first line.
+And some editors support to go to the line of that file, such as Sublime2.
+Notice: it will print a null line before the location information.
 <br>code:
     
     name = "Test Helper"
@@ -108,6 +110,7 @@ print result:
 
 pptl, pretty print with title and code loction. This function just like ppt, but will print
 the code location at the first line.
+Notice: it will print a null line before the location information.
 <br>code:
     
     name = "Test Helper"
@@ -128,6 +131,7 @@ print result:
     Test Helper
 
 flag_test will print a message 'There are codes for test in this place!' with the code loction.
+Notice: it will print a null line before the location information.
 <br>code:
 
     flag_test()
@@ -137,8 +141,10 @@ flag_test will print a message 'There are codes for test in this place!' with th
 
 print result:
 
+
     /Users/colin/work/testhelper/lib/testhelper.rb:84:in `<main>'
-    There are codes for test in this place!    
+    There are test codes in this place!    
+
 
     /Users/colin/work/testhelper/lib/testhelper.rb:89:in `<main>'
-    for test : There are codes for test in this place!    
+    for test : There are test codes in this place!    

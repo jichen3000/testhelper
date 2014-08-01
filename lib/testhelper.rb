@@ -15,7 +15,7 @@ module TestHelper
         end
         def ptl(title=nil)
             location_str = caller()[0]
-            puts(location_str)
+            puts("\n"+location_str)
             if title == nil
                 title = SourceFile.get_variable_name(location_str, __callee__)
             end
@@ -31,7 +31,7 @@ module TestHelper
         end
         def pptl(title=nil)
             location_str = caller()[0]
-            puts(location_str)
+            puts("\n"+location_str)
             if title == nil
                 title = SourceFile.get_variable_name(location_str, __callee__)
             end
@@ -40,13 +40,13 @@ module TestHelper
         end
         def flag_test(title=nil)
             location_str = caller()[0]
-            puts(location_str)
+            puts("\n"+location_str)
             if title == nil
                 title = "" 
             else
                 title = title+" : " 
             end
-            puts(title+"There are codes for test in this place!")
+            puts(title+"There are test codes in this place!")
         end
         alias puts_with_title pt
         alias puts_with_title_lineno ptl
