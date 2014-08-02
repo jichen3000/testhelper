@@ -14,7 +14,7 @@ module SourceFile
     end
 
     def self.analyze_variable_name(the_line, the_callee)
-        the_line.slice(0, the_line.index(the_callee.to_s)-1).strip()
+        the_line.slice(0, the_line.rindex("."+the_callee.to_s)).strip()
     end
 
     def self.get_variable_name(location_str, the_callee)
@@ -30,9 +30,9 @@ if __FILE__ == $0
     describe FileLine do
         it "get line from the file" do
             file_path = "../testhelper.gemspec"
-            line_no = 3
+            line_no = 2
             FileLine.get(file_path, line_no).must_equal(
-                "  s.version     = '0.0.1'\n")
+                "  s.name        = 'testhelper'\n")
         end
     end
 
@@ -46,6 +46,14 @@ if __FILE__ == $0
             the_line = "    mm.ppt()\n"
             the_callee = :ppt
             SourceFile.analyze_variable_name(the_line, the_callee).must_equal("mm")
+
+            the_line = "    ct.depth.pt()\n"
+            the_callee = :pt
+            SourceFile.analyze_variable_name(the_line, the_callee).must_equal("ct.depth")
+
+            the_line = "    ct.depth.pt('depth')\n"
+            the_callee = :pt
+            SourceFile.analyze_variable_name(the_line, the_callee).must_equal("ct.depth")
         end
     end
 end

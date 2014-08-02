@@ -65,6 +65,9 @@ if __FILE__ == $0
         def inspect()
             "ColinTest"
         end
+        def depth
+            5
+        end
         alias to_str inspect
     end
     name = "Test Helper"
@@ -74,6 +77,7 @@ if __FILE__ == $0
     name.ppt("Tt's the name")
 
     ct = ColinTest.new()
+    ct.depth.pt()
     ct.ptl()
     ct.ptl("It's a new instance.")
     ct.pptl()

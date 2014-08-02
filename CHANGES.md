@@ -1,4 +1,9 @@
-### 0.1.1 (2014-08-01)
+### 0.1.3 (2014-08-02)
+
+- Fix the issue which cannot print depth in pt method.
+
+
+### 0.1.2 (2014-08-01)
 
 - Print a null line before the location information.
 
