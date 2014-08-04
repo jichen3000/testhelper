@@ -1,3 +1,8 @@
+### 0.2.0 (2014-08-04)
+
+- Return self in the pt mehtods.
+
+
 ### 0.1.3 (2014-08-02)
 
 - Fix the issue which cannot print depth in pt method.

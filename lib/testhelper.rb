@@ -12,6 +12,7 @@ module TestHelper
                 title = SourceFile.get_variable_name(location_str, __callee__)
             end
             puts("#{title} : #{self.inspect()}")
+            self
         end
         def ptl(title=nil)
             location_str = caller()[0]
@@ -20,6 +21,7 @@ module TestHelper
                 title = SourceFile.get_variable_name(location_str, __callee__)
             end
             puts("#{title} : #{self.inspect()}")
+            self
         end
         def ppt(title=nil)
             location_str = caller()[0]
@@ -28,6 +30,7 @@ module TestHelper
             end
             puts("#{title} :")
             pp(self)
+            self
         end
         def pptl(title=nil)
             location_str = caller()[0]
@@ -37,6 +40,7 @@ module TestHelper
             end
             puts("#{title} : ")
             pp(self)
+            self
         end
         def flag_test(title=nil)
             location_str = caller()[0]
@@ -47,6 +51,7 @@ module TestHelper
                 title = title+" : " 
             end
             puts(title+"There are test codes in this place!")
+            self
         end
         alias puts_with_title pt
         alias puts_with_title_lineno ptl
