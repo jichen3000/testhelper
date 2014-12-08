@@ -1,0 +1,10 @@
+1. change CHANGES.md to add note.
+2. change testhelper.gemspec for s.version and s.date
+3. check if need to change README.md
+4. run gem command to publish
+gem build testhelper.gemspec
+gem push testhelper-0.2.1.gem
+5. move gem file to dist
+mv testhelper-0.2.1.gem dist/
+6. git push
+git-push-all '0.2.1'
