@@ -1,3 +1,8 @@
+### 0.2.1 (2014-12-07)
+
+- Correct some typo in README.md.
+
+
 ### 0.2.0 (2014-08-04)
 
 - Return self in the pt mehtods.

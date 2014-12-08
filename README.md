@@ -95,10 +95,10 @@ Notice: it will print a null line before the location information.
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
-    name.ppt()   
+    name.ptl()   
                         
     # or you can give a string as title.
-    name.ppt("It is a name:")
+    name.ptl("It is a name:")
 
 print result:
 
@@ -115,10 +115,10 @@ Notice: it will print a null line before the location information.
     
     name = "Test Helper"
     # add a title 'name : ' automatically.
-    name.ppt()
+    name.pptl()
     
     # or you can give a string as title.
-    name.ppt("It is a name:")
+    name.pptl("It is a name:")
 
 print result:
 
