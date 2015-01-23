@@ -1,3 +1,7 @@
+### 1.0.0 (2015-01-23)
+
+- Fix a path bug for windows.
+
 ### 0.2.1 (2014-12-07)
 
 - Correct some typo in README.md.

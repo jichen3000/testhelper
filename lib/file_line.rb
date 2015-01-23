@@ -10,7 +10,12 @@ end
 module SourceFile
     def self.split_file_name_and_no(location_str)
         source_infos = location_str.split(":")
-        [source_infos[0], source_infos[1].to_i]
+        if source_infos.size == 4
+            # for windows path
+            [source_infos[0]+":"+source_infos[1], source_infos[2].to_i]
+        else
+            [source_infos[0], source_infos[1].to_i]
+        end
     end
 
     def self.analyze_variable_name(the_line, the_callee)
@@ -41,6 +46,9 @@ if __FILE__ == $0
             location_str = "/Users/colin/work/testhelper/lib/testhelper.rb:55:in `<main>'"
             SourceFile.split_file_name_and_no(location_str).must_equal(
                 ["/Users/colin/work/testhelper/lib/testhelper.rb", 55])
+            location_str = "C:/Users/colin/work/testhelper/lib/testhelper.rb:55:in `<main>'"
+            SourceFile.split_file_name_and_no(location_str).must_equal(
+                ["C:/Users/colin/work/testhelper/lib/testhelper.rb", 55])
         end
         it "analyze variable name from a line of source" do
             the_line = "    mm.ppt()\n"
