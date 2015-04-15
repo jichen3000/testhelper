@@ -1,5 +1,18 @@
+# for pry
+# Pry.current_line
+# Pry::VERSION
+# puts "Pry.history.to_a[-1]:", Pry.history.to_a[-1]
+# puts "Pry.current_line:", Pry.current_line
+# puts "Pry.current.eval_string:", Pry.current.eval_string
+# puts "Pry.line_buffer.last:", Pry.line_buffer.last
+# puts "Pry.line_buffer:", Pry.line_buffer
+
 module FileLine
     def self.get(file_path, line_no)
+        # only test for Pry::VERSION == 0.10.0
+        if file_path == "(pry)"
+            return Pry.history.to_a[-1]
+        end
         open(file_path) do |f|
             # tap depend on ruby > 1.9
             return f.each_line.tap{|enum| (line_no-1).times{enum.next}}.next

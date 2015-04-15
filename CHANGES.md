@@ -1,3 +1,7 @@
+### 1.1.0 (2015-04-15)
+
+- Support Pry, only test for Pry 0.10.0
+
 ### 1.0.0 (2015-01-23)
 
 - Fix a path bug for windows.

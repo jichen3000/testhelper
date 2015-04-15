@@ -1,4 +1,4 @@
-require 'testhelper'
+require_relative '../lib/testhelper'
 
 class ColinTest
     def inspect()
@@ -7,16 +7,16 @@ class ColinTest
     alias to_str inspect
 end
 name = "Test Helper"
-name.pt()
-name.pt("Tt's the name")
+# name.pt()
+# name.pt("Tt's the name")
 name.ppt()
 name.ppt("Tt's the name")
 
-ct = ColinTest.new()
-ct.ptl()
-ct.ptl("It's a new instance.")
-ct.pptl()
-ct.pptl("It's a new instance.")
+# ct = ColinTest.new()
+# ct.ptl()
+# ct.ptl("It's a new instance.")
+# ct.pptl()
+# ct.pptl("It's a new instance.")
 
-flag_test()
-flag_test("for test")
+# flag_test()
+# flag_test("for test")

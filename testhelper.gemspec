@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'testhelper'
-  s.version     = '1.0.0'
-  s.date        = '2015-01-23'
+  s.version     = '1.1.0'
+  s.date        = '2015-04-15'
   s.summary     = "A helper for testing."
   s.description = "Some print helper methods like pt, ptl, ppt, pptl, flag_test for testing."
   s.authors     = ["Colin Ji"]
