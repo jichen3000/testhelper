@@ -11,7 +11,10 @@ module FileLine
     def self.get(file_path, line_no)
         # only test for Pry::VERSION == 0.10.0
         if file_path == "(pry)"
-            return Pry.history.to_a[-1]
+            return Pry.history.to_a.last
+        end
+        if file_path == "(irb)"
+            return Readline::HISTORY.to_a.last
         end
         open(file_path) do |f|
             # tap depend on ruby > 1.9

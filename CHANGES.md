@@ -1,6 +1,10 @@
+### 1.2.0 (2015-04-16)
+
+- Support irb, tested for irb 0.9.6
+
 ### 1.1.0 (2015-04-15)
 
-- Support Pry, only test for Pry 0.10.0
+- Support Pry, only tested for Pry 0.10.0
 
 ### 1.0.0 (2015-01-23)
 

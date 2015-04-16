@@ -6,6 +6,8 @@ Moreover, the reader can understand the source codes looking through those test 
 the best examples. Actually, even as the owner of source codes, we always would forget what our codes really do or 
 to use them, reading the test methods could give us a clue. At least for me, it is quite useful.
 
+Since version 1.2.0, you can use it in irb and pry.
+
 For example, my source file would like the below:
 
     module FileLine
